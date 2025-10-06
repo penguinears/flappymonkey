@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The \flappy Monkey Game</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Play The \flappy Monkey Game! Free browser game fun for kids and students. No downloads, instant play in your browser." />
+  <meta name="keywords" content="online games, school games, play at school, free browser games, monkey game, HTML5 game" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="The Monkey Game" />
+  <meta property="og:description" content="Play Monkey Game instantly in your browser. Free fun for kids and students." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png" />
+  <meta property="og:url" content="https://hamburger-unblocked.vercel.app" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="The Monkey Game" />
+  <meta name="twitter:description" content="Play Monkey Game instantly in your browser. Free fun for kids and students." />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffb347, #ffcc33);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      color: #222;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 10px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff;
+      text-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+    }
+
+    p.subtitle {
+      font-size: 1rem;
+      color: #fff;
+      margin-top: 8px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+
+    .controls {
+      background: rgba(255,255,255,0.9);
+      padding: 12px 20px;
+      border-radius: 12px;
+      margin: 15px 0;
+      text-align: center;
+      font-size: 1rem;
+      max-width: 700px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    .controls strong {
+      color: #ff6600;
+    }
+
+    .fullscreen-btn {
+      display: inline-block;
+      margin: 10px 0 20px;
+      padding: 12px 24px;
+      background: #ff6600;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transition: all 0.25s ease;
+    }
+
+    .fullscreen-btn:hover {
+      background: #ff8533;
+      transform: scale(1.05);
+    }
+
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      padding-top: 56.25%;
+      margin: 0 auto 30px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    footer {
+      margin: 20px 0;
+      font-size: 0.9rem;
+      color: #222;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .controls {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+      }
+      .fullscreen-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Flappy Monkey Game</h1>
+    <p class="subtitle">Play instantly in your browser — free & safe for school</p>
+  </header>
+
+  <div class="controls">
+    <p>Left click to jump.
+
+Left click(jump) on the lights of light posts to swing. Space, enter, or escape to pause.</p>
+  </div>
+
+ 
+
+  <div class="iframe-container" id="gameContainer">
+    <iframe 
+      id="gameFrame"
+      src="https://html-classic.itch.zone/html/6822346/index.html"
+      allowfullscreen="true"
+      allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; cross-origin-isolated; web-share">
+    </iframe>
+  </div>
+
+  <footer>
+    <p>Made by Leo — Have fun playing The Flappy Monkey Game!</p>
+  </footer>
+
+  <script>
+    function openFullscreen() {
+      const elem = document.getElementById("gameContainer");
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      }
+    }
+  </script>
+</body>
+</html>
